@@ -1,0 +1,17 @@
+﻿服务端流程：
+设置服务端ip和端口信息：sockaddr_in serverAddr
+创建一个socket，用于绑定和监听：listen_fd=socket(地址族, 传输方式, 传输协议)
+绑定socket连接和服务端信息：bind(listen_fd,(sockaddr *) &serverAddr,sizeof(serverAddr))
+监听：listen(listen_fd, 监听的最大的客户端数量)
+接受连接请求：conn_fd = accept(listen_fd, (sockaddr*)NULL, NULL)，返回值为代表服务器和特定客户端的连接号
+接收数据：recv(conn_fd, buff, sizeof(buff) , 0)
+发送数据：send(conn_fd, sendData, strlen(sendData), 0)
+关闭连接：close(conn_fd) close(listen_fd)
+
+客户端流程：
+设置服务端ip和端口信息：sockaddr_in serverAddr
+创建一个socket，返回连接号client_fd：socket(地址族, 传输方式, 传输协议)
+连接：connect(client_fd, (sockaddr*)&serAddr, sizeof(serAddr))
+发送数据：send(client_fd, sendData, strlen(sendData), 0)
+接收数据：recv(client_fd, buff, sizeof(buff) , 0)
+关闭连接：close(client_fd)

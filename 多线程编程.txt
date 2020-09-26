@@ -1,0 +1,7 @@
+﻿C++中多线程api
+thread anotherThread(函数名, 参数1，参数2)
+
+pthread_create(&threadID, NULL, threadName, (void*)参数)：
+需要先定义threadID：pthread_t threadID
+只能传递一个参数，传递多个参数可以传递结构体
+线程函数定义：void* threadNmae(void* arg)
