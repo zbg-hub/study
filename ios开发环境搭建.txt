@@ -1,0 +1,41 @@
+ios开发所用到的ide为xcode，在应用商店下载安装即可
+xcode获得license
+xcodebuild -license
+cocoapods为iOS开发中第三方库管理工具
+安装rvm
+curl -L get.rvm.io | bash -s stable
+source ~/.bashrc
+source ~/.bash_profile
+安装ruby
+source ~/.rvm/scripts/rvm 启用rvm
+rvm list known 查看可安装的ruby版本
+rvm install 2.6 安装一个ruby版本
+有一些包自动安装不了需要手动安装:autoconf, automake, libtool, pkg-config, libyaml, readline, libksba, openssl
+brew install autoconf
+brew install automake
+brew install libtool
+brew install pkg-config
+//brew install apple-gcc42 安装这个好像会出问题，不影响安装ruby
+brew install libyaml
+brew install libxslt
+brew install libksba
+brew install readline
+brew install openssl
+出现Error: Operation already in progress for autoconf.formula
+Another active Homebrew process is already using autoconf.formula.
+Please wait for it to finish or terminate it to continue.
+输入命令 rm -rf /usr/local/var/homebrew/locks
+cocoapods要求ruby版本高于2.2.2，终端查看ruby版本命令为ruby -v
+Gem是一个管理Ruby库和程序的标准包
+更换gem源，换成国内的源
+gem sources --remove https://rubygems.org/
+gem sources -a http://gems.ruby-china.com
+查看gem源
+gem sources -l
+更新gem源
+sudo gem update --system
+删除原先的cocoapods(如果有）
+sudo gem uninstall cocoapods
+安装cocoapods
+sudo gem install cocoapods
+pod setup

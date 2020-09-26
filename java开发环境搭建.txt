@@ -1,0 +1,33 @@
+内核android分支编译
+java,android环境搭建：
+jdk下载：
+https://www.oracle.com/java/technologies/javase-jdk8-downloads.html
+安装好后输入java --version确认是否安装成功
+环境变量设置：vim ~/.bash_profile
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home
+PATH=$JAVA_HOME/bin:$PATH:.
+CLASS_PATH=$JAVA_HOME/lib
+export JAVA_HOME
+export PATH
+export CLASS_PATH
+android sdk下载安装：
+https://developer.android.com/studio
+安装好后进入android studio配置sdk manger可以安装所需要的sdk platform和sdk tools
+环境变量设置：
+export ANDROID_SDK=/Users/bytedance/Library/Android/sdk
+export ANDROID_NDK=/Users/bytedance/Documents/android-ndk-r16b/
+export PATH=$PATH:/Users/bytedance/Documents/android-ndk-r16b/
+export ANDROID_HOME=/Users/bytedance/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/build-tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+apache-ant下载：
+https://ant.apache.org/
+环境变量设置：
+export ANT_HOME=/Users/bytedance/Documents/apache-ant-1.9.14
+export PATH=$JAVA_HOME/bin:$ANT_HOME/bin:$PATH
+maven下载：
+http://maven.apache.org/
+环境变量设置：
+export MAVEN_HOME=/Users/bytedance/Documents/apache-maven-3.6.3
+export PATH=${PATH}:${MAVEN_HOME}/bin
+环境变量配置完成后输入source ~/.bash_profile 使其生效
