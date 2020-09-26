@@ -200,7 +200,7 @@ list:
 resize和reserve的区别：
 resize是改变当前容器中元素的数量，方法是加入足够的默认元素；reserve是改变容器的最大容量，要开辟一片新的内存，然后拷贝，析构。resize是给水桶里添水，reserve是换一个大桶，把小桶的水倒进去。
 
-用迭代器删除元素：
+**用迭代器删除元素：
 1.对于序列容器vector和deque来说使用erase(itertor)后，后边的迭代器都会失效，erase返回删除后的位置。
 2.关联容器map和set，使用erase(itertor)后，当前元素迭代器会失效，但不影响其他迭代器。
 3.list删除操作也不会影响其他迭代器。
