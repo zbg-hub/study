@@ -44,6 +44,7 @@
 删除主键：Alter table tabname drop primary key(col) 
 创建索引：create [unique] index idxname on tabname(col)
 删除索引：drop index idxname
+https://zhuanlan.zhihu.com/p/38354000
 
 
 数据库事务：
